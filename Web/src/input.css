@@ -1,0 +1,40 @@
+@import 'tailwindcss';
+
+@font-face{
+    font-family: "albertSansExBold";
+    src: url("../font/AlbertSans-ExtraBold.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: "albertSansBold";
+    src: url("../font/AlbertSans-Bold.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: "albertSans";
+    src: url("../font/AlbertSans-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: "albertBlack";
+    src: url("../font/AlbertSans-Black.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: "alberThin";
+    src: url("../font/AlbertSans-Thin.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@theme {
+    --font-albertEBold: "albertSansExBold", sans-serif;
+    --font-albertBold: "albertSansBold", sans-serif;
+    --font-albertSans: "albertSans", sans-serif;
+    --font-albertBlack: "albertBlack", sans-serif;
+    --font-albertThin: "albertThin", sans-serif;
+}
