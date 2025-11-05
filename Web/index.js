@@ -79,3 +79,4 @@ ScrollTrigger.create({
     onLeaveBack : () => gsap.to('.badan' , {backgroundColor : '#a1e69e', duration : 1, ease : 'power1.out'}),
 });
 
+gsap.from('')
