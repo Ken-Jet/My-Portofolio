@@ -63,25 +63,19 @@ gsap.from('.box-6' , {
     ease : 'power4.out'
 });
 
-gsap.to('.badan',{
-    scrollTrigger : {
-        trigger : '.box-8',
-        toggleActions : 'play play play play',
-        markers : true
-    },
-    duration : 1,
-    backgroundColor : "#c6e0a8",
-    ease : 'power1.out'
+ScrollTrigger.create({
+    trigger : '.box-8',
+    onEnter : () => gsap.to('.badan' , {backgroundColor : "#a1e69e" , duration : 1 , ease : 'power1.out'}),
+    onLeave : () => gsap.to('.badan' , {backgroundColor : '#c79ee6', duration : 1, ease : 'power1.out'}),
+    onEnterBack : () => gsap.to ('.badan' , {backgroundColor : "#a1e69e" , duration : 1 , ease : 'power1.out'}),
+    onLeaveBack : () => gsap.to('.badan' , {backgroundColor : 'white', duration : 1, ease : 'power1.out'}),
 });
 
-gsap.to('.badan',{
-    scrollTrigger : {
-        trigger : '.box-7',
-        toggleActions : 'play reverse none none',
-        markers : true
-    },
-    duration : 1,
-    backgroundColor : "#caa8e0",
-    ease : 'power1.out'
-}); 
+ScrollTrigger.create({
+    trigger : '.box-7',
+    onEnter : () => gsap.to('.badan' , {backgroundColor : "#c79ee6" , duration : 1 , ease : 'power1.out'}),
+    onLeave : () => gsap.to('.badan' , {backgroundColor : 'white', duration : 1, ease : 'power1.out'}),
+    onEnterBack : () => gsap.to ('.badan' , {backgroundColor : "#c79ee6" , duration : 1 , ease : 'power1.out'}),
+    onLeaveBack : () => gsap.to('.badan' , {backgroundColor : '#a1e69e', duration : 1, ease : 'power1.out'}),
+});
 
