@@ -5,6 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 var split1 = SplitText.create('.teks-1', {type : 'words, chars'});
 var split2 = SplitText.create('.teks-2' ,{type : 'words, chars'});
 var split3 = SplitText.create('.teks-3', {type : 'lines'});
+var split4 = SplitText.create('.teks-7', {type :'words,lines,chars'});
 
 var tl1 = gsap.timeline();
 
@@ -323,3 +324,26 @@ tl3.from('.gambar-7' ,{
         yoyo : true,
         ease : 'none'
     })
+
+gsap.from('.teks-6', {
+    scrollTrigger : {
+        trigger : '.teks-6',
+        start : 'top center',
+        markers : true
+    },
+    duration : 1,
+    y : -150,
+    opacity : 0,
+    ease : 'power4.out',
+})
+
+gsap.from(split4.chars, {
+    scrollTrigger : {
+        trigger : '.teks-7',
+    },
+    duration : 1,
+    stagger : 0.03,
+    opacity : 0,
+    y : 200,
+    ease : 'power4.out'
+})
